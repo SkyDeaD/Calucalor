@@ -32,7 +32,7 @@ class CustomButton(QPushButton):
 class CalculatorApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('Калькулятор в стиле Cyberpunk')
+        self.setWindowTitle('Калькулятор')
         self.setMinimumSize(300, 400)
         self.initUI()
 
