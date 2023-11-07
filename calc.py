@@ -37,7 +37,7 @@ class CalculatorApp(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        self.setWindowIcon(QIcon('free-icon-calculator-342344.png'))  # Устанавливаем иконку
+        self.setWindowIcon(QIcon('free-icon-calculator-342344.ico'))  # Устанавливаем иконку
         widget = QWidget(self)
         self.setCentralWidget(widget)
         vbox_layout = QVBoxLayout(widget)
