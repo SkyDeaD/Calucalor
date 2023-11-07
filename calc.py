@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QGridLayout, QPushButton, QLineEdit
 from PyQt5.QtCore import Qt
-from PyQt5.QtGui import QFont, QPalette, QColor, QKeyEvent
+from PyQt5.QtGui import QFont, QPalette, QColor, QIcon, QKeyEvent
 from math import sqrt, pow
 
 
@@ -33,10 +33,11 @@ class CalculatorApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Калькулятор')
-        self.setMinimumSize(300, 400)
+        self.setFixedSize(300, 400)  # Фиксируем размер окна
         self.initUI()
 
     def initUI(self):
+        self.setWindowIcon(QIcon('free-icon-calculator-342344.png'))  # Устанавливаем иконку
         widget = QWidget(self)
         self.setCentralWidget(widget)
         vbox_layout = QVBoxLayout(widget)
