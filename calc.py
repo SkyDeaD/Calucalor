@@ -33,11 +33,11 @@ class CalculatorApp(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('Калькулятор')
-        self.setFixedSize(300, 400)  # Фиксируем размер окна
+        self.setFixedSize(300, 400)
         self.initUI()
 
     def initUI(self):
-        self.setWindowIcon(QIcon('free-icon-calculator-342344.png'))  # Устанавливаем иконку
+        self.setWindowIcon(QIcon('free-icon-calculator-342344.png'))
         widget = QWidget(self)
         self.setCentralWidget(widget)
         vbox_layout = QVBoxLayout(widget)
@@ -102,14 +102,13 @@ class CalculatorApp(QMainWindow):
         if type(event) == QKeyEvent:
             key = event.key()
             text = self.input_field.text()
-            if key == Qt.Key_Escape:  # Clear with Esc key
+            if key == Qt.Key_Escape:
                 self.input_field.clear()
-            elif key in (Qt.Key_Enter, Qt.Key_Return):  # Calculate with Enter key
+            elif key in (Qt.Key_Enter, Qt.Key_Return):
                 self.calculate_result()
-            elif key == Qt.Key_Backspace:  # Backspace key
+            elif key == Qt.Key_Backspace:
                 self.input_field.setText(text[:-1])
             else:
-                # For other keys, we add the text directly
                 char = event.text()
                 if char in '0123456789+-*/().√^':
                     self.input_field.setText(text + char)
